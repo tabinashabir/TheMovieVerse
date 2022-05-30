@@ -1566,6 +1566,41 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TheMovieVerse.DB/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.25",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.25",
+          "TheMovieVerse.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TheMovieVerse.DB.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TheMovieVerse.DB.dll": {}
+        }
+      },
+      "TheMovieVerse.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/TheMovieVerse.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TheMovieVerse.Model.dll": {}
+        }
+      },
+      "TheMovieVerse.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/TheMovieVerse.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TheMovieVerse.ViewModel.dll": {}
+        }
       }
     }
   },
@@ -5908,6 +5943,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TheMovieVerse.DB/1.0.0": {
+      "type": "project",
+      "path": "../TheMovieVerse.DB/TheMovieVerse.DB.csproj",
+      "msbuildProject": "../TheMovieVerse.DB/TheMovieVerse.DB.csproj"
+    },
+    "TheMovieVerse.Model/1.0.0": {
+      "type": "project",
+      "path": "../TheMovieVerse.Model/TheMovieVerse.Model.csproj",
+      "msbuildProject": "../TheMovieVerse.Model/TheMovieVerse.Model.csproj"
+    },
+    "TheMovieVerse.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../TheMovieVerse.ViewModel/TheMovieVerse.ViewModel.csproj",
+      "msbuildProject": "../TheMovieVerse.ViewModel/TheMovieVerse.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5915,23 +5965,25 @@
       "Microsoft.EntityFrameworkCore >= 3.1.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.25",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.25",
-      "Swashbuckle.AspNetCore >= 6.3.1"
+      "Swashbuckle.AspNetCore >= 6.3.1",
+      "TheMovieVerse.DB >= 1.0.0",
+      "TheMovieVerse.ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tabin\\.nuget\\packages\\": {}
+    "C:\\Users\\L&G\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tabin\\source\\repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
+      "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
       "projectName": "TheMovieVerse",
-      "projectPath": "C:\\Users\\tabin\\source\\repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
-      "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tabin\\source\\repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\obj\\",
+      "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
+      "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5944,7 +5996,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
+              "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
+            },
+            "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

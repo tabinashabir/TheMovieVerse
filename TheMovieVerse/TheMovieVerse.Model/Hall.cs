@@ -6,5 +6,6 @@ namespace TheMovieVerse.Model
 {
     public class Hall
     {
+
     }
 }
