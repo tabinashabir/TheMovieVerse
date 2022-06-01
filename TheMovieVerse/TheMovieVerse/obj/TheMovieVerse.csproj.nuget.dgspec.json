@@ -155,7 +155,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -229,6 +233,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.25, )"
@@ -242,6 +254,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.25, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

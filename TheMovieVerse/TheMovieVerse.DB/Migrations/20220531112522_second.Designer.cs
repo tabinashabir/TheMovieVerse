@@ -10,8 +10,8 @@ using TheMovieVerse.DB;
 namespace TheMovieVerse.DB.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20220530190313_Models updated")]
-    partial class Modelsupdated
+    [Migration("20220531112522_second")]
+    partial class second
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,10 +29,12 @@ namespace TheMovieVerse.DB.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<long?>("MovieId")
                         .HasColumnType("bigint");
@@ -41,31 +43,27 @@ namespace TheMovieVerse.DB.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Actor");
+                    b.ToTable("Actors");
                 });
 
-            modelBuilder.Entity("TheMovieVerse.Model.Hall", b =>
+            modelBuilder.Entity("TheMovieVerse.Model.Cinema", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("HallName")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                    b.Property<string>("CinemaLocation")
+                        .HasColumnType("nvarchar(300)")
+                        .HasMaxLength(300);
 
-                    b.Property<long?>("TheatreId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("TotalSeats")
-                        .HasColumnType("bigint");
+                    b.Property<string>("CinemaName")
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TheatreId");
-
-                    b.ToTable("Halls");
+                    b.ToTable("Cinemas");
                 });
 
             modelBuilder.Entity("TheMovieVerse.Model.Movie", b =>
@@ -82,7 +80,18 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
+                    b.Property<string>("MovieDuration")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("MovieGenre")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("MovieLanguage")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("MovieProducer")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
@@ -99,52 +108,6 @@ namespace TheMovieVerse.DB.Migrations
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("TheMovieVerse.Model.MovieBooking", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long?>("HallId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long?>("MovieId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("SeatId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("ShowScheduleId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("TheatreId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HallId");
-
-                    b.HasIndex("MovieId");
-
-                    b.HasIndex("SeatId");
-
-                    b.HasIndex("ShowScheduleId");
-
-                    b.HasIndex("TheatreId");
-
-                    b.ToTable("MovieBooking");
-                });
-
             modelBuilder.Entity("TheMovieVerse.Model.Seat", b =>
                 {
                     b.Property<long>("Id")
@@ -152,8 +115,11 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("HallId")
+                    b.Property<long?>("CinemaId")
                         .HasColumnType("bigint");
+
+                    b.Property<bool>("IsOccupied")
+                        .HasColumnType("bit");
 
                     b.Property<string>("SeatNo")
                         .HasColumnType("varchar(10)")
@@ -164,7 +130,7 @@ namespace TheMovieVerse.DB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HallId");
+                    b.HasIndex("CinemaId");
 
                     b.HasIndex("TheatreId");
 
@@ -182,19 +148,21 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("ShowDate")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<double>("TicketPrice")
                         .HasColumnType("float");
 
                     b.Property<string>("TimeSlot")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("ShowSchedule");
+                    b.ToTable("ShowSchedules");
                 });
 
             modelBuilder.Entity("TheMovieVerse.Model.Theatre", b =>
@@ -204,11 +172,22 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<long?>("CinemaId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsBooked")
+                        .HasColumnType("bit");
+
                     b.Property<string>("TheatreName")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
+                        .HasColumnType("nvarchar(60)")
+                        .HasMaxLength(60);
+
+                    b.Property<int>("TotalSeats")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CinemaId");
 
                     b.ToTable("Theatres");
                 });
@@ -220,41 +199,11 @@ namespace TheMovieVerse.DB.Migrations
                         .HasForeignKey("MovieId");
                 });
 
-            modelBuilder.Entity("TheMovieVerse.Model.Hall", b =>
-                {
-                    b.HasOne("TheMovieVerse.Model.Theatre", null)
-                        .WithMany("Halls")
-                        .HasForeignKey("TheatreId");
-                });
-
-            modelBuilder.Entity("TheMovieVerse.Model.MovieBooking", b =>
-                {
-                    b.HasOne("TheMovieVerse.Model.Hall", null)
-                        .WithMany("MovieBookings")
-                        .HasForeignKey("HallId");
-
-                    b.HasOne("TheMovieVerse.Model.Movie", null)
-                        .WithMany("MovieBookings")
-                        .HasForeignKey("MovieId");
-
-                    b.HasOne("TheMovieVerse.Model.Seat", null)
-                        .WithMany("MovieBookings")
-                        .HasForeignKey("SeatId");
-
-                    b.HasOne("TheMovieVerse.Model.ShowSchedule", null)
-                        .WithMany("MovieBookings")
-                        .HasForeignKey("ShowScheduleId");
-
-                    b.HasOne("TheMovieVerse.Model.Theatre", null)
-                        .WithMany("MovieBookings")
-                        .HasForeignKey("TheatreId");
-                });
-
             modelBuilder.Entity("TheMovieVerse.Model.Seat", b =>
                 {
-                    b.HasOne("TheMovieVerse.Model.Hall", null)
+                    b.HasOne("TheMovieVerse.Model.Cinema", null)
                         .WithMany("Seats")
-                        .HasForeignKey("HallId");
+                        .HasForeignKey("CinemaId");
 
                     b.HasOne("TheMovieVerse.Model.Theatre", null)
                         .WithMany("Seats")
@@ -266,6 +215,13 @@ namespace TheMovieVerse.DB.Migrations
                     b.HasOne("TheMovieVerse.Model.Movie", null)
                         .WithMany("ShowSchedules")
                         .HasForeignKey("MovieId");
+                });
+
+            modelBuilder.Entity("TheMovieVerse.Model.Theatre", b =>
+                {
+                    b.HasOne("TheMovieVerse.Model.Cinema", null)
+                        .WithMany("Theatres")
+                        .HasForeignKey("CinemaId");
                 });
 #pragma warning restore 612, 618
         }

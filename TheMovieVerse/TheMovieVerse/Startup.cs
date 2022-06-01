@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TheMovieVerse.AutoMapper;
 using TheMovieVerse.DB;
 
 
@@ -29,6 +30,7 @@ namespace TheMovieVerse
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(AppProfile));
             services.AddControllers();
             services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("DatabaseConnection")));
 
