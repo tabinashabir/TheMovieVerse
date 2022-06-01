@@ -10,13 +10,12 @@ namespace TheMovieVerse.Model
         [Key]
         [Required]
         public long Id { get; set; }
-        
+
+        [MaxLength(50)]
         public string FirstName{ get; set; }
+        [MaxLength(50)]
         public string LastName { get; set; }
         public int Age { get; set; }
         
-        
-
-
     }
 }
