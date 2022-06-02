@@ -4,11 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-
 namespace TheMovieVerse.ViewModel
 {
     public class MovieView
     {
+
         [MaxLength(150)]
         public string MovieTitle { get; set; }
 
@@ -35,9 +35,7 @@ namespace TheMovieVerse.ViewModel
         public string MovieDuration { get; set; }
         public List<ShowScheduleView> ShowSchedules { get; set; } = new List<ShowScheduleView>();
 
+       // public List<MovieBookingView> MovieBookings { get; set; } = new List<MovieBookingView>();
     }
-
-
-
 }
 

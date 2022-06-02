@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TheMovieVerse.DB;
 using TheMovieVerse.Model;
+using TheMovieVerse.Services.Interface;
 using TheMovieVerse.ViewModel;
 
 namespace TheMovieVerse.Controllers
@@ -18,11 +19,13 @@ namespace TheMovieVerse.Controllers
     {
         private readonly MovieDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IMovieService _movieService;
 
-        public MoviesController(MovieDbContext context, IMapper mapper)
+        public MoviesController(MovieDbContext context, IMapper mapper, IMovieService movieService)
         {
             _context = context;
             this._mapper = mapper;
+            this._movieService = movieService;
         }
 
 
@@ -30,27 +33,47 @@ namespace TheMovieVerse.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
-            
-            return await _context.Movies
-                .Include(x=>x.Actors)
-                .Include(x=>x.ShowSchedules)
-                .ToListAsync();
 
+            return await _movieService.GetAll();
+            
         }
+        // GET: api/Movies/MoviesLanguage
+        [HttpGet("GetByMovieLanguage/{MovieLanguage}")]
+        public async Task<ActionResult<List<Movie>>> GetMovieByLanguage(string MovieLanguage)
+        {
+            return await _movieService.GetMovieByLanguage(MovieLanguage);
+        }
+        [HttpGet("GetMovieByGenre/{MovieGenre}")]
+        public async Task<ActionResult<List<Movie>>> GetMovieByGenre(string MovieGenre)
+        {
+            return await _movieService.GetMovieByGenre(MovieGenre);
+        }
+        [HttpGet("GetMovieByName/{MovieTitle}")]
+        public async Task<ActionResult<Movie>> GetMovieByName(string MovieTitle)
+        {
+            return await _movieService.GetMovieByName(MovieTitle);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Movie>> GetMovie(long id)
         {
-            var movie = await _context.Movies.FindAsync(id);
-            //var Shows = await _context.ShowSchedules.FindAsync(id);
-            //var movie = (Fro)
-
-            if (movie == null)
-            {
-                return NotFound();
-            }
-            return movie;
+            return await _movieService.GetMovieById(id);
 
         }
         
@@ -58,69 +81,35 @@ namespace TheMovieVerse.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovie(long id, Movie movie)
+        public async Task<long> PutMovie(long id, Movie movie)
         {
-            if (id != movie.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(movie).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MovieExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            long mid = await _movieService.PutMovie(id, movie);
+            return mid;
         }
 
         // POST: api/Movies
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<MovieView>> PostMovie(MovieView movie)
+        public async Task<ActionResult<long>> PostMovie(MovieView movie)
         {
             try
             {
-                var movieModel = _mapper.Map<Movie>(movie);
-                _context.Movies.Add(movieModel);
-                await _context.SaveChangesAsync();
-                //return CreatedAtAction("GetMovie", new { name = movie.MovieTitle }, movie);
-                
-                return StatusCode(StatusCodes.Status201Created, $"A new movie is saved with");
+                long id =await _movieService.PostMovie(movie);
+                return id;
             }
             catch (Exception)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, "Error occurred while saving a movie");
+                return 0;
             }
         }
 
         // DELETE: api/Movies/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Movie>> DeleteMovie(long id)
+        public async Task<ActionResult<long>> DeleteMovie(long id)
         {
-            var movie = await _context.Movies.FindAsync(id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-
-            _context.Movies.Remove(movie);
-            await _context.SaveChangesAsync();
-
-            return movie;
+            long newid = await _movieService.DeleteMovie(id);
+            return newid;
         }
 
         private bool MovieExists(long id)

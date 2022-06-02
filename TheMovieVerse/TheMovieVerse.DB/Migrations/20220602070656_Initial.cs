@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TheMovieVerse.DB.Migrations
 {
-    public partial class InitialMig : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,7 +50,7 @@ namespace TheMovieVerse.DB.Migrations
                     TheatreName = table.Column<string>(maxLength: 60, nullable: true),
                     TotalSeats = table.Column<int>(nullable: false),
                     IsBooked = table.Column<bool>(nullable: false),
-                    CinemaId = table.Column<long>(nullable: true)
+                    CinemaId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,7 +60,7 @@ namespace TheMovieVerse.DB.Migrations
                         column: x => x.CinemaId,
                         principalTable: "Cinemas",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,7 +71,7 @@ namespace TheMovieVerse.DB.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(maxLength: 50, nullable: true),
                     LastName = table.Column<string>(maxLength: 50, nullable: true),
-                    MovieId = table.Column<long>(nullable: true)
+                    MovieId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -80,7 +81,7 @@ namespace TheMovieVerse.DB.Migrations
                         column: x => x.MovieId,
                         principalTable: "Movies",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -90,9 +91,9 @@ namespace TheMovieVerse.DB.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TicketPrice = table.Column<double>(nullable: false),
-                    ShowDate = table.Column<string>(maxLength: 50, nullable: true),
+                    ShowDate = table.Column<DateTime>(type: "date", nullable: false),
                     TimeSlot = table.Column<string>(maxLength: 50, nullable: true),
-                    MovieId = table.Column<long>(nullable: true)
+                    MovieId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -102,7 +103,37 @@ namespace TheMovieVerse.DB.Migrations
                         column: x => x.MovieId,
                         principalTable: "Movies",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MovieBookings",
+                columns: table => new
+                {
+                    Id = table.Column<long>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(maxLength: 50, nullable: true),
+                    Age = table.Column<int>(nullable: false),
+                    NoOfTickets = table.Column<int>(nullable: false),
+                    MovieId = table.Column<long>(nullable: false),
+                    TheatreId = table.Column<long>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MovieBookings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MovieBookings_Movies_MovieId",
+                        column: x => x.MovieId,
+                        principalTable: "Movies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovieBookings_Theatres_TheatreId",
+                        column: x => x.TheatreId,
+                        principalTable: "Theatres",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -113,16 +144,16 @@ namespace TheMovieVerse.DB.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SeatNo = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: true),
                     IsOccupied = table.Column<bool>(nullable: false),
-                    CinemaId = table.Column<long>(nullable: true),
-                    TheatreId = table.Column<long>(nullable: true)
+                    TheatreId = table.Column<long>(nullable: false),
+                    MovieBookingId = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Seats", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Seats_Cinemas_CinemaId",
-                        column: x => x.CinemaId,
-                        principalTable: "Cinemas",
+                        name: "FK_Seats_MovieBookings_MovieBookingId",
+                        column: x => x.MovieBookingId,
+                        principalTable: "MovieBookings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -130,7 +161,7 @@ namespace TheMovieVerse.DB.Migrations
                         column: x => x.TheatreId,
                         principalTable: "Theatres",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -139,9 +170,19 @@ namespace TheMovieVerse.DB.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Seats_CinemaId",
+                name: "IX_MovieBookings_MovieId",
+                table: "MovieBookings",
+                column: "MovieId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovieBookings_TheatreId",
+                table: "MovieBookings",
+                column: "TheatreId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Seats_MovieBookingId",
                 table: "Seats",
-                column: "CinemaId");
+                column: "MovieBookingId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Seats_TheatreId",
@@ -171,10 +212,13 @@ namespace TheMovieVerse.DB.Migrations
                 name: "ShowSchedules");
 
             migrationBuilder.DropTable(
-                name: "Theatres");
+                name: "MovieBookings");
 
             migrationBuilder.DropTable(
                 name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "Theatres");
 
             migrationBuilder.DropTable(
                 name: "Cinemas");

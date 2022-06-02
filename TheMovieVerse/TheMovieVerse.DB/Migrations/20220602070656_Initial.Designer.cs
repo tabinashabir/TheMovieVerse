@@ -10,8 +10,8 @@ using TheMovieVerse.DB;
 namespace TheMovieVerse.DB.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20220531112522_second")]
-    partial class second
+    [Migration("20220602070656_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,7 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<long?>("MovieId")
+                    b.Property<long>("MovieId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -108,6 +108,42 @@ namespace TheMovieVerse.DB.Migrations
                     b.ToTable("Movies");
                 });
 
+            modelBuilder.Entity("TheMovieVerse.Model.MovieBooking", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("NoOfTickets")
+                        .HasColumnType("int");
+
+                    b.Property<long>("TheatreId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("TheatreId");
+
+                    b.ToTable("MovieBookings");
+                });
+
             modelBuilder.Entity("TheMovieVerse.Model.Seat", b =>
                 {
                     b.Property<long>("Id")
@@ -115,22 +151,22 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("CinemaId")
-                        .HasColumnType("bigint");
-
                     b.Property<bool>("IsOccupied")
                         .HasColumnType("bit");
+
+                    b.Property<long?>("MovieBookingId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("SeatNo")
                         .HasColumnType("varchar(10)")
                         .HasMaxLength(10);
 
-                    b.Property<long?>("TheatreId")
+                    b.Property<long>("TheatreId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CinemaId");
+                    b.HasIndex("MovieBookingId");
 
                     b.HasIndex("TheatreId");
 
@@ -144,12 +180,11 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("MovieId")
+                    b.Property<long>("MovieId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("ShowDate")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                    b.Property<DateTime>("ShowDate")
+                        .HasColumnType("date");
 
                     b.Property<double>("TicketPrice")
                         .HasColumnType("float");
@@ -172,7 +207,7 @@ namespace TheMovieVerse.DB.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long?>("CinemaId")
+                    b.Property<long>("CinemaId")
                         .HasColumnType("bigint");
 
                     b.Property<bool>("IsBooked")
@@ -196,32 +231,55 @@ namespace TheMovieVerse.DB.Migrations
                 {
                     b.HasOne("TheMovieVerse.Model.Movie", null)
                         .WithMany("Actors")
-                        .HasForeignKey("MovieId");
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TheMovieVerse.Model.MovieBooking", b =>
+                {
+                    b.HasOne("TheMovieVerse.Model.Movie", null)
+                        .WithMany("MovieBookings")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TheMovieVerse.Model.Theatre", null)
+                        .WithMany("MovieBookings")
+                        .HasForeignKey("TheatreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TheMovieVerse.Model.Seat", b =>
                 {
-                    b.HasOne("TheMovieVerse.Model.Cinema", null)
+                    b.HasOne("TheMovieVerse.Model.MovieBooking", null)
                         .WithMany("Seats")
-                        .HasForeignKey("CinemaId");
+                        .HasForeignKey("MovieBookingId");
 
                     b.HasOne("TheMovieVerse.Model.Theatre", null)
                         .WithMany("Seats")
-                        .HasForeignKey("TheatreId");
+                        .HasForeignKey("TheatreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TheMovieVerse.Model.ShowSchedule", b =>
                 {
                     b.HasOne("TheMovieVerse.Model.Movie", null)
                         .WithMany("ShowSchedules")
-                        .HasForeignKey("MovieId");
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TheMovieVerse.Model.Theatre", b =>
                 {
                     b.HasOne("TheMovieVerse.Model.Cinema", null)
                         .WithMany("Theatres")
-                        .HasForeignKey("CinemaId");
+                        .HasForeignKey("CinemaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

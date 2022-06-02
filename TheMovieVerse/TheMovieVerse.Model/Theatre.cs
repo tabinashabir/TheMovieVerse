@@ -20,6 +20,8 @@ namespace TheMovieVerse.Model
 
         public List<Seat> Seats { get; set; } = new List<Seat>();
 
-        //public List<MovieBooking> MovieBookings { get; set; } = new List<MovieBooking>();
+        public long CinemaId { get; set; }
+
+        public List<MovieBooking> MovieBookings { get; set; } = new List<MovieBooking>();
     }
 }

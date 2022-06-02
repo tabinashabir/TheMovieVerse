@@ -144,3 +144,8 @@ C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\Lamar.dll
+C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\Lamar.Microsoft.DependencyInjection.dll
+C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\LamarCodeGeneration.dll
+C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\TheMovieVerse.Services.dll
+C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse\bin\Debug\netcoreapp3.1\TheMovieVerse.Services.pdb
