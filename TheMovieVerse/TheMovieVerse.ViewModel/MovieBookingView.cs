@@ -14,9 +14,9 @@ namespace TheMovieVerse.Model
         public int Age { get; set; }
         public int NoOfTickets { get; set; }
         public long MovieId { get; set; }
-        public long CinemaId { get; set; }
+        //public long CinemaId { get; set; }
         public long TheatreId { get; set; }
-        public long ShowScheduleId { get; set; }
+        // public long ShowScheduleId { get; set; }
         //public long SeatId { get; set; }
     }
 }

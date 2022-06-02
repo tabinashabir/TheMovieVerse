@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {}
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
         "projectName": "TheMovieVerse.Model",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

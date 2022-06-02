@@ -11,3 +11,16 @@ C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.Model.dll
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.Model.pdb
 C:\Users\L&G\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.csproj.CopyComplete
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.deps.json
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.dll
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.pdb
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.Model.dll
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\bin\Debug\netcoreapp3.1\TheMovieVerse.Model.pdb
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.csproj.AssemblyReference.cache
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.AssemblyInfoInputs.cache
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.AssemblyInfo.cs
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.csproj.CopyComplete
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.dll
+C:\Users\tabin\Source\Repos\tabinashabir\TheMovieVerse\TheMovieVerse\TheMovieVerse.ViewModel\obj\Debug\netcoreapp3.1\TheMovieVerse.ViewModel.pdb

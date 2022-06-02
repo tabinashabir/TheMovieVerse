@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj": {}
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj",
         "projectName": "TheMovieVerse.DB",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
               }
             }
           }
@@ -82,17 +82,17 @@
         }
       }
     },
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
         "projectName": "TheMovieVerse.Model",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,17 +136,17 @@
         }
       }
     },
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
         "projectName": "TheMovieVerse.Services",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,14 +160,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
               },
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
               },
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
               }
             }
           }
@@ -210,17 +210,17 @@
         }
       }
     },
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj",
         "projectName": "TheMovieVerse.ViewModel",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,8 +234,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
               }
             }
           }
@@ -268,17 +268,17 @@
         }
       }
     },
-    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj": {
+    "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
+        "projectUniqueName": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
         "projectName": "TheMovieVerse",
-        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
-        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\obj\\",
+        "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.csproj",
+        "packagesPath": "C:\\Users\\tabin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -292,14 +292,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
               },
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj"
               },
-              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
-                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
+              "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\tabin\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
               }
             }
           }

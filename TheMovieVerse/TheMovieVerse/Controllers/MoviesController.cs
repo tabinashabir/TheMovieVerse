@@ -29,48 +29,36 @@ namespace TheMovieVerse.Controllers
         }
 
 
-        // GET: api/Movies
-        [HttpGet]
+        // GET: api/Get All Movies
+        [HttpGet("GetAllMovies")]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
 
             return await _movieService.GetAll();
             
         }
+
         // GET: api/Movies/MoviesLanguage
-        [HttpGet("GetByMovieLanguage/{MovieLanguage}")]
+        [HttpGet("GetMovieByLanguage/{MovieLanguage}")]
         public async Task<ActionResult<List<Movie>>> GetMovieByLanguage(string MovieLanguage)
         {
             return await _movieService.GetMovieByLanguage(MovieLanguage);
         }
+
         [HttpGet("GetMovieByGenre/{MovieGenre}")]
         public async Task<ActionResult<List<Movie>>> GetMovieByGenre(string MovieGenre)
         {
             return await _movieService.GetMovieByGenre(MovieGenre);
         }
+
         [HttpGet("GetMovieByName/{MovieTitle}")]
         public async Task<ActionResult<Movie>> GetMovieByName(string MovieTitle)
         {
             return await _movieService.GetMovieByName(MovieTitle);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // GET: api/Movies/5
-        [HttpGet("{id}")]
+        [HttpGet("GetMovieById{id}")]
         public async Task<ActionResult<Movie>> GetMovie(long id)
         {
             return await _movieService.GetMovieById(id);
@@ -80,17 +68,15 @@ namespace TheMovieVerse.Controllers
         // PUT: api/Movies/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<long> PutMovie(long id, Movie movie)
+        [HttpPut("UpdateMovieUsingId{id}")]
+        public async Task<long> PutMovie(EditMovieView movie)
         {
-            long mid = await _movieService.PutMovie(id, movie);
+            long mid = await _movieService.PutMovie(movie);
             return mid;
         }
 
         // POST: api/Movies
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        [HttpPost("AddMovies")]
         public async Task<ActionResult<long>> PostMovie(MovieView movie)
         {
             try
@@ -105,7 +91,7 @@ namespace TheMovieVerse.Controllers
         }
 
         // DELETE: api/Movies/5
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteAMovie{id}")]
         public async Task<ActionResult<long>> DeleteMovie(long id)
         {
             long newid = await _movieService.DeleteMovie(id);
