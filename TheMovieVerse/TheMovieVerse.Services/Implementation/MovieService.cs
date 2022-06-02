@@ -110,58 +110,11 @@ namespace TheMovieVerse.Services.Implementation
             }
         }
 
-        //public async Task<long> PutMovie(long id, Movie movie)
-        //{
-        //    //if (id != movie.Id)
-        //    //{
-        //    //    return BadRequest();
-        //    //}
-
-        //    _movieDbContext.Entry(movie).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        return await _movieDbContext.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!MovieExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //    //return await _movieDbContext.SaveChangesAsync();
-
-        //    return NoContent();
-        //}
-
-        public async Task<long> PutMovie(long id, Movie movie)
+        public async Task<long> PutMovie(EditMovieView movie)
         {
-            if (id != movie.Id)
-            {
-                return BadRequest();
-            }
-            _movieDbContext.Entry(movie).State = EntityState.Modified;
-            try
-            {
-                await _movieDbContext.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MovieExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            return NoContent();
+            var movieModel = _mapper.Map<Movie>(movie);
+            _movieDbContext.Movies.Update(movieModel);
+            return await _movieDbContext.SaveChangesAsync();
         }
 
         private bool MovieExists(long id)
