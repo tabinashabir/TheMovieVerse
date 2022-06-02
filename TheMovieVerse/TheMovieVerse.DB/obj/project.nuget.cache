@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nile9MIRPY1hYjLOUbLB+9XbXWc5Nfwk1eckLlueiVLHMsMx5h3uO6Dgv0vfe491cm3+7AfNK7nutHqw30kzCg==",
+  "dgSpecHash": "qV39zjVV+pRyJvfzD7hCWvic0Dw+TpgT4Seyx8xDwF+3UkPYZmBd+PWH3V3fPwxobTe9ePFhDeaKh+sHVsvZiA==",
   "success": true,
   "projectFilePath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\L&G\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\L&G\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\L&G\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\L&G\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

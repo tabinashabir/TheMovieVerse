@@ -4,19 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using TheMovieVerse.Model;
 
-namespace TheMovieVerse.DB
+namespace TheMovieVerse.DB.Interface
 {
-    public class MovieDbContext:DbContext
+    public interface IMovieDbContext:IDisposable,IDbContext
     {
-        public MovieDbContext()
-        {
-
-        }
-        public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options)
-        {
-
-        }
-
         public DbSet<Theatre> Theatres { get; set; }
         public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<Seat> Seats { get; set; }
@@ -24,6 +15,5 @@ namespace TheMovieVerse.DB
         public DbSet<ShowSchedule> ShowSchedules { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<MovieBooking> MovieBookings { get; set; }
-        
     }
 }

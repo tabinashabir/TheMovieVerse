@@ -38,5 +38,6 @@ namespace TheMovieVerse.Model
         public string MovieDuration { get; set; }
         public List<ShowSchedule> ShowSchedules { get; set; }= new List<ShowSchedule>();
 
+        public List<MovieBooking> MovieBookings { get; set; } = new List<MovieBooking>();
     }
 }

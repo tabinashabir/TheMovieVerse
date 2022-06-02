@@ -44,6 +44,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.25, )"
@@ -113,6 +117,80 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
+        "projectName": "TheMovieVerse.Services",
+        "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj",
+        "packagesPath": "C:\\Users\\L&G\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\L&G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
+                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
+              },
+              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj": {
+                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Model\\TheMovieVerse.Model.csproj"
+              },
+              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.25, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -217,6 +295,9 @@
               "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj": {
                 "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.DB\\TheMovieVerse.DB.csproj"
               },
+              "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj": {
+                "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.Services\\TheMovieVerse.Services.csproj"
+              },
               "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj": {
                 "projectPath": "C:\\Users\\L&G\\Source\\Repos\\tabinashabir\\TheMovieVerse\\TheMovieVerse\\TheMovieVerse.ViewModel\\TheMovieVerse.ViewModel.csproj"
               }
@@ -240,6 +321,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Lamar.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

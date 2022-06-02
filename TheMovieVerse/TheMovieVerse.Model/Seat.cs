@@ -11,12 +11,11 @@ namespace TheMovieVerse.Model
         [Key]
         [Required]
         public long Id {get; set;}
-
         [MaxLength(10)]
         [Column(TypeName = "varchar(10)")]
         public string SeatNo {get; set;}
         public bool IsOccupied {get; set;}
-
-       // public List<MovieBooking> MovieBookings { get; set; } = new List<MovieBooking>();
+        public long TheatreId { get; set; }
+        //public List<MovieBooking> MovieBookings { get; set; } = new List<MovieBooking>();
     }
 }

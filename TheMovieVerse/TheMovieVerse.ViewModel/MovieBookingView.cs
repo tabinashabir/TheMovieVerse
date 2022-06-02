@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TheMovieVerse.ViewModel
+namespace TheMovieVerse.Model
 {
     public class MovieBookingView
     {
@@ -12,5 +12,11 @@ namespace TheMovieVerse.ViewModel
         [MaxLength(50)]
         public string LastName { get; set; }
         public int Age { get; set; }
+        public int NoOfTickets { get; set; }
+        public long MovieId { get; set; }
+        public long CinemaId { get; set; }
+        public long TheatreId { get; set; }
+        public long ShowScheduleId { get; set; }
+        //public long SeatId { get; set; }
     }
 }

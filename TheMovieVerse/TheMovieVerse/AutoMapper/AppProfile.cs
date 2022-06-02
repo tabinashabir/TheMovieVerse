@@ -14,7 +14,8 @@ namespace TheMovieVerse.AutoMapper
             CreateMap<MovieBookingView, MovieBooking>().ReverseMap();
             CreateMap<ActorView, Actor>().ReverseMap();
             CreateMap<CinemaView, Cinema>().ReverseMap();
-            CreateMap<ShowScheduleView, ShowSchedule>().ReverseMap();
+            CreateMap<ShowScheduleView, ShowSchedule>().ReverseMap()
+                .ForMember(x => x.ShowDate, opt => opt.MapFrom(o => o.ShowDate.Date));
 
 
         }

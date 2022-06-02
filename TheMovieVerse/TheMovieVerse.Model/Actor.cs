@@ -14,7 +14,7 @@ namespace TheMovieVerse.Model
         public string FirstName { get; set; }
         [MaxLength(50)]
         public string LastName { get; set; }
-
+        public long MovieId { get; set; }
 
     }
 }

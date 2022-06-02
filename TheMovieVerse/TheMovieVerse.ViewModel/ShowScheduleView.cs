@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace TheMovieVerse.ViewModel
@@ -9,8 +10,8 @@ namespace TheMovieVerse.ViewModel
     {
         public double TicketPrice { get; set; }
 
-        [MaxLength(50)]
-        public string ShowDate { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime ShowDate { get; set; }
         [MaxLength(50)]
         public string TimeSlot { get; set; }
 
