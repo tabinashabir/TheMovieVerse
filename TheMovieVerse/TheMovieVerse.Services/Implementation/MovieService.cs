@@ -21,14 +21,14 @@ namespace TheMovieVerse.Services.Implementation
         public MovieService(MovieDbContext movieDbContext, IMapper mapper)
         {
             this._movieDbContext = movieDbContext;
+
             this._mapper = mapper;
         }
         public async Task<long> DeleteMovie(long id)
         {
             var movie = await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
-                .Where(x => x.Id == id)
+                .Include(x => x.MovieActors)
+                //.Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
 
             if (movie == null)
@@ -42,36 +42,49 @@ namespace TheMovieVerse.Services.Implementation
             return id;
         }
 
-        public async Task<List<Movie>> GetAll()
+        public async Task<List<MovieView>> GetAll()
         {
-            return await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
+            var moviesModel=await _movieDbContext.Movies
+                .Include(x=>x.MovieActors)
                 .ToListAsync();
+            foreach (var actorId in moviesModel.Select(x=>x.MovieActors).Select(y=>y.ActorId))
+            {
+                _movieDbContext.Actors.Where(x => x.ActorId == actorId);
+            }
+            
+
+            var reqList = _mapper.Map<List<MovieView>>(moviesModel);
+            return reqList;
         }
-        public async Task<List<Movie>> GetMovieByLanguage(string MovieLanguage)
+
+
+        public async Task<List<MovieTitleView>> GetMovieByLanguage(string MovieLanguage)
         {
+            
             var movie = await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
-                .Where(x => x.MovieLanguage == MovieLanguage)
+                 
+                 .Where(x => x.MovieLanguage == MovieLanguage)
+                 .Select(x => new MovieTitleView { MovieTitle = x.MovieTitle})
                 .ToListAsync();
-            return movie;
+            
+            var rewList = _mapper.Map<List<MovieTitleView>>(movie);
+            return rewList;
         }
         public async Task<List<Movie>> GetMovieByGenre(string MovieGenre)
         {
             var movie = await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
+                //.Include(x => x.Actors)
+                
                 .Where(x => x.MovieGenre == MovieGenre)
                 .ToListAsync();
+
             return movie;
         }
         public async Task<Movie> GetMovieByName(string MovieTitle){
 
             var movie = await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
+                //.Include(x => x.Actors)
+                
                 .Where(x => x.MovieTitle == MovieTitle)
                 .FirstOrDefaultAsync();
             return movie;
@@ -86,9 +99,9 @@ namespace TheMovieVerse.Services.Implementation
         public async Task<Movie> GetMovieById(long movieId)
         {
             var movie = await _movieDbContext.Movies
-                .Include(x => x.Actors)
-                .Include(x => x.ShowSchedules)
-                .Where(x=>x.Id==movieId)
+                //.Include(x => x.Actors)
+                 
+                //.Where(x=>x.Id==movieId)
                 .FirstOrDefaultAsync();
 
             
@@ -102,7 +115,7 @@ namespace TheMovieVerse.Services.Implementation
                 var movieModel = _mapper.Map<Movie>(movie);
                 _movieDbContext.Movies.Add(movieModel);
                 await _movieDbContext.SaveChangesAsync();
-                return movieModel.Id;
+                return movieModel.MovieId;
             }
             catch (Exception)
             {
@@ -119,7 +132,7 @@ namespace TheMovieVerse.Services.Implementation
 
         private bool MovieExists(long id)
         {
-            return _movieDbContext.Movies.Any(e => e.Id == id);
+            return _movieDbContext.Movies.Any(e => e.MovieId == id);
         }
 
         private long NoContent()

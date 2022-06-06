@@ -31,7 +31,7 @@ namespace TheMovieVerse.Controllers
 
         // GET: api/Get All Movies
         [HttpGet("GetAllMovies")]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<List<MovieView>>> GetMovies()
         {
 
             return await _movieService.GetAll();
@@ -40,7 +40,7 @@ namespace TheMovieVerse.Controllers
 
         // GET: api/Movies/MoviesLanguage
         [HttpGet("GetMovieByLanguage/{MovieLanguage}")]
-        public async Task<ActionResult<List<Movie>>> GetMovieByLanguage(string MovieLanguage)
+        public async Task<ActionResult<List<MovieTitleView>>> GetMovieByLanguage(string MovieLanguage)
         {
             return await _movieService.GetMovieByLanguage(MovieLanguage);
         }
@@ -100,7 +100,7 @@ namespace TheMovieVerse.Controllers
 
         private bool MovieExists(long id)
         {
-            return _context.Movies.Any(e => e.Id == id);
+            return _context.Movies.Any(e => e.MovieId == id);
         }
     }
 }

@@ -8,34 +8,44 @@ namespace TheMovieVerse.ViewModel
 {
     public class MovieView
     {
+        public MovieView()
+        {
+            this.MovieActors = new HashSet<MovieActorView>();
+        }
 
         [MaxLength(150)]
+        [Required]
         public string MovieTitle { get; set; }
 
-        public List<ActorView> Actors { get; set; } = new List<ActorView>();
+        // [Required]
+        // public List<ActorView> Actors { get; set; } = new List<ActorView>();
 
         [MaxLength(50)]
+        [Required]
         public string MovieDirector { get; set; }
 
         [MaxLength(50)]
+        [Required]
         public string MovieProducer { get; set; }
 
         [MaxLength(50)]
+        [Required]
         public string MovieLanguage { get; set; }
 
         [MaxLength(50)]
+        [Required]
         public string MovieGenre { get; set; }
 
-        [MaxLength(10)]
-        [Column(TypeName = "varchar(10)")]
-        public string MovieRating { get; set; }
+        [Required]
+        public int MovieRating { get; set; }
 
+        [Required]
         public bool IsUpcoming { get; set; }
 
+        [Required]
         public string MovieDuration { get; set; }
-        public List<ShowScheduleView> ShowSchedules { get; set; } = new List<ShowScheduleView>();
 
-       // public List<MovieBookingView> MovieBookings { get; set; } = new List<MovieBookingView>();
+        public virtual ICollection<MovieActorView> MovieActors { get; set; }
     }
 }
 
